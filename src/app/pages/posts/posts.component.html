@@ -1,0 +1,3 @@
+<section class="row">
+ <app-post *ngFor="let post of postsRemoto | async" [postsRemoto]="post"(clickPost)="onClickPadre($event)"></app-post>
+</section>
