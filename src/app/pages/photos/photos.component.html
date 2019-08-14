@@ -1,3 +1,7 @@
-<p>
-  photos works!
-</p>
+<div class="row">
+  <section *ngFor="let photo of Photos | async" class="col-md-4" >
+      <h2>{{photo.title}}</h2>
+  <img src="{{photo.url}}" width="180">
+  
+  </section>
+  </div>

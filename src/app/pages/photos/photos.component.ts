@@ -8,11 +8,12 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['./photos.component.css']
 })
 export class PhotosComponent implements OnInit {
+  Photos: any;
 
-
-  constructor() { }
+  constructor(private http: HttpClient, private dataServicio: DataService) { }
 
   ngOnInit() {
+    this.Photos = this.dataServicio.getPhotos();
   }
 
 }
