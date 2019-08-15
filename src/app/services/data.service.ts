@@ -28,4 +28,22 @@ getPhotos(){
             );
 }
 
+getUsers(){
+  return this.http.get("http://jsonplaceholder.typicode.com/users")
+            .pipe(
+              tap(users => {
+              console.log(users);
+            })
+            );
+}
+
+getTodos(){
+  return this.http.get("http://jsonplaceholder.typicode.com/todos")
+            .pipe(
+              tap(todos => {
+              console.log(todos);
+            })
+            );
+}
+
 }
